@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { useSelector,useDispatch } from "react-redux"
 import { fetchUsers } from "./slices/userSlice"
 import { AppDispatch, RootState } from './store/store';
-import './page.css'
+
 export default function Home() {
   
   const userRef = useRef(false); 
@@ -17,32 +17,34 @@ export default function Home() {
     if(userRef.current === false) {
       dispatch(fetchUsers())
     }
-   return () => {
+   return () => {https://github.com/chanchaljaiswal12345/Reduxtoolkit-/pull/1/commits/8e19b95bb8b075577a8cc2acf86fe7d43473ddb9
     userRef.current = true
    }
 
   },[])
 
   return (
-    <div className='table-2'>
-      <table className="main border-collapse border border-slate-500 ...">
-   <thead className='table-head'>
-     <tr>
-       <th>NAME</th>
-       <th >EMAIL</th>
-       <th>USERNAME</th>
-     </tr>
-   </thead>
-   {entities?.map((user: any) => (
-   <tbody key={user.id} >
-     <tr className='table-row'>
-       <td>{user.name}</td>
-       <td>{user.email}</td>
-      <td>{user.username}</td>
-     </tr>
-  </tbody>
-     ))}
- </table> 
- </div>
+
+<div>
+        <table className="border-collapse border border-slate-500 w-full">
+          <thead>
+            <tr>
+              <th className="border border-slate-500 px-4 py-2">NAME</th>
+              <th className="border border-slate-500 px-4 py-2">EMAIL</th>
+              <th className="border border-slate-500 px-4 py-2">USERNAME</th>
+            </tr>
+          </thead>
+          <tbody>
+            {entities?.map((user: any) => (
+              <tr key={user.id}>
+                <td className="border border-slate-500 px-4 py-2">{user.name}</td>
+                <td className="border border-slate-500 px-4 py-2">{user.email}</td>
+                <td className="border border-slate-500 px-4 py-2">{user.username}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
   )
 }
