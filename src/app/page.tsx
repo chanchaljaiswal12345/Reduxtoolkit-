@@ -17,15 +17,13 @@ export default function Home() {
     if(userRef.current === false) {
       dispatch(fetchUsers())
     }
-   return () => {
+   return () => {https://github.com/chanchaljaiswal12345/Reduxtoolkit-/pull/1/commits/8e19b95bb8b075577a8cc2acf86fe7d43473ddb9
     userRef.current = true
    }
 
   },[])
 
   return (
-    <div className='table-2'>
-
 
 <div>
         <table className="border-collapse border border-slate-500 w-full">
@@ -48,8 +46,5 @@ export default function Home() {
         </table>
       </div>
 
-
-  
- </div>
   )
 }
