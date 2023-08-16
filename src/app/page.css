@@ -1,0 +1,15 @@
+.table-2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.table-head{
+background-color: blueviolet;
+font-size: 30px;
+}
+.table-row{
+    padding: 15px;
+    font-size: 20px;
+}
