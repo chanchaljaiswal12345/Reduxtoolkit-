@@ -17,7 +17,7 @@ export default function Home() {
     if(userRef.current === false) {
       dispatch(fetchUsers())
     }
-   return () => {https://github.com/chanchaljaiswal12345/Reduxtoolkit-/pull/1/commits/8e19b95bb8b075577a8cc2acf86fe7d43473ddb9
+   return () => {
     userRef.current = true
    }
 
@@ -45,6 +45,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
+
 
   )
 }
